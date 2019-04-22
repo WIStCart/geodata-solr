@@ -1,10 +1,7 @@
 # Geodata Solr Core Configuration
 
 ## Branches:
-- `geodata-production`: Production branch, clone in Solr data directory via:
-  `$ git clone git@github.com:WIStCart/geodata-solr.git geodata-production`
-- `geodata-development`: Development branch, clone in Solr data directory via:
-  `$ git clone git@github.com:WIStCart/geodata-solr.git geodata-development`
+I changed the methodology originally implemented by Michael B. in November 2018.  Previously, he had two solr-core brances in this repo: one for production, and a second branch for development.  I simplified this to a single core named "geodata-core."
 
-Note: Branches differ slightly in `core.properties`, where the `name=` attribute 
-must refer to the correct branch name. Beware this when merging branches.
+Since we have two servers, one for production and another for test, it felt unnecessary to have two cores for production and two for "test."  In our case, both solr platforms are effectively treated as "production" (i.e., cores in production and test are identical)
+
